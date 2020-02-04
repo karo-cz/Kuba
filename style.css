@@ -1,22 +1,24 @@
 body {
-  margin: 0 auto;
+  margin: 0 auto 5%;
   text-align: center;
-  background-image: url("images/finish/tlo3.jpg");
+  background-image: url("images/finish/meme.jpg");
+  background-size: 100%;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  margin: auto;
 }
 .intro {
   /* background-repeat: no-repeat; */
+  margin: 0 10%;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 60vh;
+  height: 70vh;
   background-image: url("images/birthday-crew.jpeg");
 }
 
 .game {
   width: 60%;
+  margin-top: 5%;
 }

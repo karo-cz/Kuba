@@ -124,10 +124,11 @@ function draw() {
     finish.display();
     setTimeout(function() {
       console.log("active");
-      fill(197, 240, 70);
+      noLoop();
+      fill(255);
       textSize(32);
-      text("DA MATTRAZE KING", 200, 700);
-    }, 1000);
+      text("KUBA DA MATTRAZE KING", 200, 700);
+    }, 16000);
   }
 
   ball.bounceDoggo();
