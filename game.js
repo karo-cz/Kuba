@@ -140,6 +140,8 @@ function draw() {
       text("SO COMFEE", 180, 300);
       text("SO MUCH SCORE", 600, 500);
       text("100 LAT", 800, 800);
+      text("NO MORE BACK PAIN", 700, 300);
+      text("AWSM", 400, 200);
     }, 16000);
   }
 
