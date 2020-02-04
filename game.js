@@ -8,6 +8,8 @@ let yas;
 let finish;
 let finishIMG1;
 let finishIMG2;
+let sound;
+let canPlay = false;
 
 let balloon;
 // let balloonIMG;
@@ -26,6 +28,9 @@ let backgroundLocations = [
 
 function setup() {
   createCanvas(1200, 1000);
+
+  sound = loadSound("sounds/Arcade-Madness.mp3");
+
   let playing = true;
   // ********************************** BACKGROUND IMAGE
   let backgroundImages = [];
@@ -116,11 +121,15 @@ function draw() {
     playing = false;
   });
 
+  if (sound.buffer && !sound.isPlaying()) {
+    sound.play();
+  }
+
   fill(0);
   textSize(32);
-  text(`Score: ${playerScore}`, width - 150, 50);
+  text(`Score: ${playerScore}`, width - 200, 50);
 
-  if (playerScore === 40) {
+  if (playerScore === 400) {
     finish.display();
     setTimeout(function() {
       console.log("active");
@@ -128,6 +137,9 @@ function draw() {
       fill(255);
       textSize(32);
       text("KUBA DA MATTRAZE KING", 200, 700);
+      text("SO COMFEE", 180, 300);
+      text("SO MUCH SCORE", 600, 500);
+      text("100 LAT", 800, 800);
     }, 16000);
   }
 
@@ -141,7 +153,7 @@ function draw() {
     doggo.move("right");
   }
 
-  if (playerScore !== 40) {
+  if (playerScore !== 400) {
     doggo.display();
     ball.display();
   }
@@ -152,11 +164,11 @@ function draw() {
     if (balloons[i].collide(ball)) {
       ball.reverse("y");
       balloons.splice(i, 1);
-      playerScore += 1;
+      playerScore += 10;
     }
   }
 
-  if (playerScore !== 40) {
+  if (playerScore !== 400) {
     if (ball.ballOut(yas)) {
       return true;
     } else {
