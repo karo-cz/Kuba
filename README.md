@@ -9,3 +9,6 @@ To practice my skills while attending Web Development Bootcamp, as well as to gi
 The game is done with JavaScript with the P5.js library.
 
 //The time was really limited, the organization of the code could be improved.
+
+
+https://karo-cz.github.io/Kuba-birthdayCard/
